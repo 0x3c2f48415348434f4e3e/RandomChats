@@ -10,6 +10,9 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily:{
+      'Google_Signika_SansSerif_Fallback':['Signika', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: "2rem",
