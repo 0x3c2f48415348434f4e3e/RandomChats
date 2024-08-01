@@ -12,41 +12,22 @@ import Blog from './component/routes/Blog';
 import Contact from './component/routes/Contact';
 import Login from './component/routes/Login';
 import Register from './component/routes/Register';
+import { useState } from 'react';
 
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element: <Home />,
-  },
-  {
-    path:"/about",
-    element: <About />,
-  },
-  {
-    path:"/contact",
-    element: <Contact />,
-  },
-  {
-    path:"/blog",
-    element: <Blog />,
-  },
-  {
-    path:"/login",
-    element: <Login />,
-  },
-  {
-    path:"/register",
-    element: <Register />,
-  }
-])
+import { ThemeProvider } from './component/MyContext';
+import { router } from './App';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  /*<React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </React.StrictMode>*/
+  <ThemeProvider>
+    <RouterProvider router={router} />
+  </ThemeProvider>
+  
 );
 //<App />
 // If you want to start measuring performance in your app, pass a function

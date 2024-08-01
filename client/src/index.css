@@ -6,3 +6,8 @@ Using Google Fonts - Signika
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+    height: 100vh;
+}
